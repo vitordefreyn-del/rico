@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pokemon-card{
+  padding: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  box-align: center;
+  padding: 10px;
+  height: 350px;
+  width: 230px;
+  margin: 0 auto;
+  background: radial-gradient(white , rgb(71, 167, 71));
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.palavras{
+  color:rgb(27, 184, 27);
+}
+
+.tipo-pokemon1{
+  color: #317219;
+}
+.container-background {
+  background-size: cover;      /* cobre toda a tela */
+  background-position: center; /* centraliza */
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url(gifp3.gif)
+}
