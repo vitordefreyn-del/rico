@@ -77,3 +77,87 @@ code {
   height: 100vh;
   background-image: url(gifp3.gif)
 }
+.treinador{
+  padding: 100%;
+  text-transform: capitalize;
+  text-align: center;
+
+  padding: 10px;
+  width: 330px;
+  margin: 0 auto;
+  background: radial-gradient(white , rgb(4, 43, 2));
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+.Pokebola{
+  background-image: url(pokeball.gif);
+  width: 80px;
+  height: 80px;
+  background-size: cover ;
+  background-position: center;
+  background-color: transparent;
+  border: transparent;  
+  cursor: pointer;
+}
+.Pokebola1{
+  background-image: url(pokeball.gif);
+  width: 80px;
+  height: 80px;
+  background-size: cover ;
+  background-position: center;
+  background-color: transparent;
+  border: transparent;  
+  cursor: pointer;
+}
+.Pokebola2{
+  background-image: url(pokeball.gif);
+  width: 80px;
+  height: 80px;
+  background-size: cover ;
+  background-position: center;
+  background-color: transparent;
+  border: transparent;  
+  cursor: pointer;
+}
+.Pokebola:hover{
+ background-image: url(rowlet5.webp);
+ transform: scale(1.05);
+ box-shadow: 0 0 15px rgb(0, 0, 0)
+}
+.Pokebola1:hover{
+  background-image: url(tenor.gif);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(0, 0, 0)
+ }
+ .Pokebola2:hover{
+  background-image: url(colt.webp);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(0, 0, 0)
+ }
+.container-background2 {
+  background-size: cover;      /* cobre toda a tela */
+  background-position: center; /* centraliza */
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url(wallpaper3.gif)
+}
+.container-background3 {
+  background-size: cover;      /* cobre toda a tela */
+  background-position: center; /* centraliza */
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url(gifp1.gif)
+}
+.pokemon-card2{
+  padding: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  box-align: center;
+  padding: 10px;
+  height: 350px;
+  width: 230px;
+  margin: 0 auto;
+  background: radial-gradient(white , rgb(168, 33, 33));
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
