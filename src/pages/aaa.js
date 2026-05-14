@@ -1,34 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css';
+import'./Pokemon.css';
 import{motion}from "framer-motion";
+import { Link } from 'react-router';
+import useFetchPokeapi from '../hooks/useFetchPokeapi.js';
 
-function Aaa() {
-const [pokemons,setPokemons] = useState ({});
-const [loading, setLoading] = useState (true);
-const [error, setError] = useState (false);
 
-useEffect (() => {
-  const getData = async () => {
-    try {
-      const res = await 
-      axios.get('https://Pokeapi.co/api/v2/pokemon/rowlet');
-      setPokemons(res.data);
-      console.log('Success:', res.data);
-      setLoading(false); 
-
-    }
-    catch (err) {
-      console.error("Erro ao carregar API", err);
-      
-      setLoading(false)
-
-      setError(true)
-    }
-  };
-  getData();
-}, []);
-
+function Aaa(){
+  const {pokemons,loading,error}=useFetchPokeapi();
 
   if (loading) return <div className="loader">Carregando Pokemons. . . ></div>;
   if (error) return <div className="error">ocorreu um erro inesperado></div>;
@@ -40,8 +19,12 @@ useEffect (() => {
     transition={{ duration: 0.5 }}
   >
     <div className= "container-background"  >
+    <header>
+    <Link to="/" ><button className="voltar" ></button></Link>
+    </header>
     <div className= "App">
     <h1>poke card</h1>
+   
     <div className="container-carta">
     <div className="pokemon-card">
     <h3>{pokemons.name}</h3>
@@ -54,11 +37,12 @@ useEffect (() => {
     pokemons.stats[1].base_stat }</h3>
     </div>
     </div>
+    
     </div>
     </div>
     </motion.div>
   );
-}
+  }
 
 
 export default Aaa;

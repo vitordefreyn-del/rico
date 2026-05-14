@@ -1,8 +1,8 @@
 import React from "react";
 import{Route,BrowserRouter,Routes}from "react-router-dom";
-import Aaa from"./aaa";
-import Iee from"./Iee";
-import Treinador from "./Treinador";
+import Aaa from"./pages/aaa";
+import Iee from"./pages/Iee";
+import Treinador from "./pages/Treinador";
 
 function App(){
     return(

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css';
+import'./Pokemon.css';
 import{motion}from "framer-motion";
+import { Link } from 'react-router';
 
 function Iee() {
 const [pokemons,setPokemons] = useState ({});
@@ -42,6 +43,7 @@ useEffect (() => {
     <div className= "container-background2"  >
     <div className= "App">
     <h1>poke card</h1>
+    <Link to="/"><h1 ClassName="voltar">Voltar</h1></Link>
     <div className="container-carta">
     <div className="pokemon-card2">
     <h3>{pokemons.name}</h3>

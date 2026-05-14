@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import{Route,BrowserRouter,Routes,Link }from "react-router-dom";
-import './App.css';
-import que from "./que.webp"
+import React  from 'react';
+
+import{Link }from "react-router-dom";
+import'./Treinador.css';
+import que from "../assets/que.webp"
 import{motion}from "framer-motion";
 
 function Treinador() {
-const [pokemons,setPokemons] = useState ({});
-const [loading, setLoading] = useState (true);
-const [error, setError] = useState (false);
+
 
 return(
     <motion.div

@@ -1,0 +1,58 @@
+.pokemon-card{
+    padding: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    box-align: center;
+    padding: 10px;
+    height: 350px;
+    width: 230px;
+    margin: 0 auto;
+    background: radial-gradient(white , rgb(71, 167, 71));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
+  
+  .palavras{
+    color:rgb(27, 184, 27);
+  }
+  
+  .tipo-pokemon1{
+    color: #317219;
+  }
+  .container-background {
+    background-size: cover;      /* cobre toda a tela */
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    background-image: url(../assets/gifp3.gif)
+  }
+  .pokemon-card2{
+    padding: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 350px;
+    width: 230px;
+    margin: 0 auto;
+    background: radial-gradient(white , rgb(168, 33, 33));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
+  .container-background2 {
+    background-size: cover;
+    position: relative;      /* cobre toda a tela */
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-image: url(../assets/wallpaper3.gif)
+  }
+  .voltar{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left:20px;
+    top: 20px;
+    background-image: url(../assets/png.png)
+  }
