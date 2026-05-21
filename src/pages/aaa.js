@@ -14,7 +14,10 @@ function Aaa(){
   if (loading) return <div className="loader">Carregando Pokemons. . . ></div>;
   if (error) return <div className="error">ocorreu um erro inesperado></div>;
   const pokemonType = pokemons.types[0].type.name;
-  const backgroundClass = pokemonType === "fire" ? "container-background2" : "container-background";
+  const backgroundClass = 
+    pokemonType === "fire" ? "container-background2"
+  : pokemonType === "dragon" ? "container-background4"  
+  : "container-background";
   
   return (
     <motion.div
@@ -31,7 +34,10 @@ function Aaa(){
     <h1>poke card</h1>
    
     <div className="container-carta">
-    <div className={`pokemon-card ${pokemonType === "fire" ? "pokemon-card2" : ""}`}>
+    <div className={`pokemon-card ${
+      pokemonType === "fire"  ? "pokemon-card2" 
+    : pokemonType === "dragon" ? "pokemon-card3" 
+    :"" }`}>
     <h3>{pokemons.name}</h3>
     <h2 className='tipo-pokemon1'>{pokemons.types[0].type.name}</h2>
     <img src={pokemons.sprites.front_default} alt={pokemons.name} style={{ width: '180px' }} />
