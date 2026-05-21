@@ -4,13 +4,18 @@ import'./Pokemon.css';
 import{motion}from "framer-motion";
 import { Link } from 'react-router';
 import useFetchPokeapi from '../hooks/useFetchPokeapi.js';
+import { useParams } from "react-router-dom";
 
 
 function Aaa(){
-  const {pokemons,loading,error}=useFetchPokeapi();
+  const { id } = useParams();
+  const {pokemons,loading,error}=useFetchPokeapi(id);
 
   if (loading) return <div className="loader">Carregando Pokemons. . . ></div>;
   if (error) return <div className="error">ocorreu um erro inesperado></div>;
+  const pokemonType = pokemons.types[0].type.name;
+  const backgroundClass = pokemonType === "fire" ? "container-background2" : "container-background";
+  
   return (
     <motion.div
     initial={{ opacity: 0 }}
@@ -18,7 +23,7 @@ function Aaa(){
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <div className= "container-background"  >
+    <div className= {backgroundClass}  >
     <header>
     <Link to="/" ><button className="voltar" ></button></Link>
     </header>
@@ -26,7 +31,7 @@ function Aaa(){
     <h1>poke card</h1>
    
     <div className="container-carta">
-    <div className="pokemon-card">
+    <div className={`pokemon-card ${pokemonType === "fire" ? "pokemon-card2" : ""}`}>
     <h3>{pokemons.name}</h3>
     <h2 className='tipo-pokemon1'>{pokemons.types[0].type.name}</h2>
     <img src={pokemons.sprites.front_default} alt={pokemons.name} style={{ width: '180px' }} />

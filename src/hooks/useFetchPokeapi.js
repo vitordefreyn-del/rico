@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-function useFetchPokeapi() {
+function useFetchPokeapi(pokemon) {
     const [pokemons,setPokemons] = useState ({});
     const [loading, setLoading] = useState (true);
     const [error, setError] = useState (false);
@@ -10,7 +10,7 @@ function useFetchPokeapi() {
       const getData = async () => {
         try {
           const res = await 
-          axios.get('https://Pokeapi.co/api/v2/pokemon/rowlet');
+          axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
           setPokemons(res.data);
           console.log('Success:', res.data);
           setLoading(false); 
@@ -24,9 +24,10 @@ function useFetchPokeapi() {
           setError(true)
         }
       };
-      getData(),[pokemons]}
+      getData();
+    },[pokemons]);
   
-    );
+    
 return{pokemons,loading,error}}
 
 export default useFetchPokeapi;

@@ -33,13 +33,13 @@ return(
     </h3>
     
    
-    <Link to="/Pokebola">
+    <Link to="/Pokebola/rowlet">
     <button className="Pokebola"></button>
     </Link>
-    <Link to="/Pokebola1">
+    <Link to="/Pokebola/torchic">
     <button className="Pokebola1"></button>
     </Link> 
-    <Link to="/Pokebola2">
+    <Link to="/Pokebola/gible">
     <button className="Pokebola2"></button>
     </Link>
     </div>
