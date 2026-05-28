@@ -63,12 +63,34 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
   }
+  .pokemon-card4{
+    padding: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 350px;
+    width: 230px;
+    margin: 0 auto;
+    background: radial-gradient(white , rgb(230, 193, 91));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
   .container-background4 {
     background-size: cover;
     position: relative;      /* cobre toda a tela */
     background-repeat: no-repeat;
     height: 100vh;
     background-image: url(../assets/gibleback.gif)
+  }
+  .container-background5 {
+    background-size: cover;
+    position: relative;      /* cobre toda a tela */
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-image: url(../assets/uaa.gif)
   }
   .voltar{
     height: 50px;

@@ -24,15 +24,15 @@ return(
     <h2 className="informacoes">Idade:25      nickname:Sedoe Eukuro</h2>
     <img src={que}  style={{ width: '180px' }} />
     <h3>
-        quantidades de pokemons:1
+        quantidades de pokemons:6
         quantidades de bagdes:1
-        pokebolas para acessar seu pokemons:1
+        pokebolas para acessar seu pokemons:6
 
     
     
     </h3>
     
-   
+    <div className="pokebola-container">
     <Link to="/Pokebola/rowlet">
     <button className="Pokebola"></button>
     </Link>
@@ -42,6 +42,16 @@ return(
     <Link to="/Pokebola/gible">
     <button className="Pokebola2"></button>
     </Link>
+    <Link to="/Pokebola/mareep">
+    <button className="Pokebola3"></button>
+    </Link>
+    <Link to="/Pokebola/gible">
+    <button className="Pokebola2"></button>
+    </Link>
+    <Link to="/Pokebola/gible">
+    <button className="Pokebola2"></button>
+    </Link>
+    </div>
     </div>
     </div>
     </div>

@@ -16,7 +16,8 @@ function Aaa(){
   const pokemonType = pokemons.types[0].type.name;
   const backgroundClass = 
     pokemonType === "fire" ? "container-background2"
-  : pokemonType === "dragon" ? "container-background4"  
+  : pokemonType === "dragon" ? "container-background4" 
+  : pokemonType === "electric" ? "container-background5"   
   : "container-background";
   
   return (
@@ -36,7 +37,8 @@ function Aaa(){
     <div className="container-carta">
     <div className={`pokemon-card ${
       pokemonType === "fire"  ? "pokemon-card2" 
-    : pokemonType === "dragon" ? "pokemon-card3" 
+    : pokemonType === "dragon" ? "pokemon-card3"
+    : pokemonType === "electric" ? "pokemon-card4"
     :"" }`}>
     <h3>{pokemons.name}</h3>
     <h2 className='tipo-pokemon1'>{pokemons.types[0].type.name}</h2>

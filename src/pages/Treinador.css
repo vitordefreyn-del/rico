@@ -1,6 +1,6 @@
 
 .treinador{
-    padding: 100%;
+   
     text-transform: capitalize;
     text-align: center;
   
@@ -41,6 +41,16 @@
     border: transparent;  
     cursor: pointer;
   }
+  .Pokebola3{
+    background-image: url(../assets/pokeball.gif);
+    width: 80px;
+    height: 80px;
+    background-size: cover ;
+    background-position: center;
+    background-color: transparent;
+    border: transparent;  
+    cursor: pointer;
+  }
   .Pokebola:hover{
    background-image: url(../assets/rowlet5.webp);
    transform: scale(1.05);
@@ -56,7 +66,20 @@
     transform: scale(1.05);
     box-shadow: 0 0 15px rgb(0, 0, 0)
    }
-  
+   .Pokebola3:hover{
+    background-image: url(../assets/mareep.gif);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(0, 0, 0)
+   }
+   .pokebola-container{
+    display: grid;
+    grid-template-columns: repeat(3, 105px);
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+   }  
   .container-background3 {
     background-size: cover;      /* cobre toda a tela */
     background-position: center; /* centraliza */
