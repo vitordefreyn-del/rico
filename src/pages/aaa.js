@@ -9,15 +9,15 @@ import { useParams } from "react-router-dom";
 
 function Aaa(){
   const { id } = useParams();
-  const {pokemons,loading,error}=useFetchPokeapi(id);
+  const {myPokemons,loading,error}=useFetchPokeapi(id);
 
-  if (loading) return <div className="loader">Carregando Pokemons. . . ></div>;
-  if (error) return <div className="error">ocorreu um erro inesperado></div>;
-  const pokemonType = pokemons.types[0].type.name;
+  if (loading) return <div className="loader">Carregando Pokemons. . . </div>;
+  if (error) return <div className="error">ocorreu um erro inesperado </div>;
+ 
+  const myType = myType.tipo;
   const backgroundClass = 
-    pokemonType === "fire" ? "container-background2"
-  : pokemonType === "dragon" ? "container-background4" 
-  : pokemonType === "electric" ? "container-background5"   
+    myType === "fire" ? "container-background2" 
+  : myType === "electric" ? "container-background5"   
   : "container-background";
   
   return (
@@ -40,14 +40,17 @@ function Aaa(){
     : pokemonType === "dragon" ? "pokemon-card3"
     : pokemonType === "electric" ? "pokemon-card4"
     :"" }`}>
-    <h3>{pokemons.name}</h3>
-    <h2 className='tipo-pokemon1'>{pokemons.types[0].type.name}</h2>
-    <img src={pokemons.sprites.front_default} alt={pokemons.name} style={{ width: '180px' }} />
-    <h3>{pokemons.stats[0].stat.name + ' ' + 
+    <h3>{myPokemons.nome}</h3>
+    <h2 className='tipo-pokemon1'>
+    {myPokemons.tipo}</h2>
+    <img src={myPokemons.imagem} alt={myPokemons.nome} style={{ width: '180px' }} />
+    <h3>
+Vida: {myPokemons.vida}
 
-    pokemons.stats[0].base_stat + ' ' + pokemons.stats[1].stat.name + ' ' + 
-    
-    pokemons.stats[1].base_stat }</h3>
+Ataque: {myPokemons.ataque}
+</h3>
+
+
     </div>
     </div>
     
